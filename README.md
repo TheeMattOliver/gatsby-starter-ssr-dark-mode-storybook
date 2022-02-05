@@ -27,3 +27,7 @@ Nothing, really. We're using our `<ThemeProvider>` component in `preview.js`, bu
 ![Storybook dark mode decorator](https://media.giphy.com/media/XojJHvbPsoYeB9gGns/giphy.gif)
 
 Note that the "correct" theme value is being passed into the iFrame'd `<Story>`, but nothing is happening, as expected, because the iFrame has no notion of the `contextValue` that the `<ThemeProvider>` creates in `gatsby-ssr.js`.
+
+### Is this a webpack modification?
+
+Seems like there's ongoing discussion on this [here](https://github.com/storybookjs/storybook/issues/12542).

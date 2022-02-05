@@ -21,7 +21,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.3.3",
-    "terser": "4.6.11"
+    "terser": "4.6.11",
+    "vercel": "^23.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",

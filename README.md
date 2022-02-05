@@ -8,7 +8,7 @@
   Gatsby's default starter + Josh Comeau SSR Dark Mode
 </h1>
 
-Default Gatsby 4 boilerplate, but includes the [Josh Comeau](https://github.com/joshwcomeau/dark-mode-minimal) SSR dark mode implementation. Josh's original project is great and by all means fork it but it needs an update to work with Gatsby 4.
+Default Gatsby 4 boilerplate, but includes the [Josh Comeau](https://github.com/joshwcomeau/dark-mode-minimal) SSR dark mode implementation. Josh's original project is great and by all means fork it but it may need an update to work with Gatsby 4.
 
 This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 

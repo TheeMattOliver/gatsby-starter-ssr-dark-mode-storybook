@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
-import { ThemeProvider } from './ThemeContext';
-import GlobalStyles from './GlobalStyles';
+import { ThemeProvider } from "./ThemeProvider"
+import GlobalStyles from "./GlobalStyles"
 
 function App({ children }) {
   return (
@@ -9,7 +9,7 @@ function App({ children }) {
       <GlobalStyles />
       {children}
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react"
+import styled from "styled-components"
 
-import { ThemeContext } from './ThemeContext';
+import { ThemeContext } from "./ThemeProvider"
 
-import DarkToggle from './DarkToggle';
+import DarkToggle from "./DarkToggle"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -11,13 +11,13 @@ const Header = ({ siteTitle }) => {
       {siteTitle}
       <DarkToggle />
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 16px;
-`;
+`
 
-export default Header;
+export default Header

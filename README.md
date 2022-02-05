@@ -1,6 +1,6 @@
 ## Minimal repro
 
-Getting SSR dark mode, Themeprovider, and Storybook work together.
+Getting SSR dark mode, ThemeProvider, and Storybook to work together.
 
 ### What we want to happen:
 

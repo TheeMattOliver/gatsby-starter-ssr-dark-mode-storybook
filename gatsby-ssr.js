@@ -1,3 +1,5 @@
+/* https://github.com/joshwcomeau/dark-mode-minimal | MIT license */
+
 import React from "react"
 import Terser from "terser"
 

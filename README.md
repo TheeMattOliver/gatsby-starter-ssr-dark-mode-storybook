@@ -2,6 +2,41 @@
 
 Getting SSR dark mode, ThemeProvider, and Storybook to work together.
 
+👉 site with ssr "dark mode" (color mode) here: [https://gatsby-starter-ssr-dark-mode-storybook.vercel.app/](https://gatsby-starter-ssr-dark-mode-storybook.vercel.app/)
+
+👉 storybook using site's `ThemeProvider` here (illustrates the defect): [https://sb-gatsby-starter-ssr-dark-mode-storybook.vercel.app/?path=/story/components-testcomponent--test-component](https://sb-gatsby-starter-ssr-dark-mode-storybook.vercel.app/?path=/story/components-testcomponent--test-component)
+
+## To run locally
+
+1. fork this repo and clone a local copy
+
+2. install dependencies using package manager of your choice
+
+```sh
+yarn
+
+// or
+
+npm install
+
+```
+
+3. Run Gatsby:
+
+```sh
+
+yarn start
+
+```
+
+4. Run Storybook:
+
+```sh
+
+yarn storybook
+
+```
+
 ### What we want to happen:
 
 [Josh Comeau's Gatsby SSR color-mode implementation](https://github.com/joshwcomeau/dark-mode-minimal) lets us use CSS variables to implement theming and inject those variables into the `<head>` at compile time. Is it possible to achieve the same thing in Storybook? E.g.:

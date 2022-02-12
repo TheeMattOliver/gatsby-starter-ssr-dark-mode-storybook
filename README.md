@@ -6,7 +6,7 @@ Getting SSR dark mode, ThemeProvider, and Storybook to work together.
 
 [Josh Comeau's Gatsby SSR color-mode implementation](https://github.com/joshwcomeau/dark-mode-minimal) lets us use CSS variables to implement theming and inject those variables into the `<head>` at compile time. Is it possible to achieve the same thing in Storybook? E.g.:
 
-• When generating HTML at compile-time, inject a `<script>` tag before all of our content (which in the case of Storybook, I assume would be Storybook Preview, which is the place components related to stories are rendered. You can read about how this works [here](https://github.com/orta/react-storybook/blob/master/docs/how_storybook_works.md]).
+• When Gatsby SSR generates HTML at compile-time, inject a `<script>` tag before all of our content (which in the case of Storybook, I assume would be Storybook Preview, which is the place components related to stories are rendered. You can read about how this works [here](https://github.com/orta/react-storybook/blob/master/docs/how_storybook_works.md]).
 
 • In that script tag, work out what the user's color preferences are
 

@@ -5,9 +5,8 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: border-box;
-    font-family: Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    /* font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
+    font-family: ${p => p.theme.text.default.fontFamily};
   }
 
   body {
@@ -18,6 +17,11 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: var(--color-secondary);
   }
+  @font-face {
+    font-family: "et-book";
+    src: url("/fonts/et-book-roman-old-style-figures.woff") format('woff');
+  }
+  
 `
 
 export default GlobalStyles

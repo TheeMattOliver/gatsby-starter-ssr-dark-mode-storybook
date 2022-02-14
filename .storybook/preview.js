@@ -6,6 +6,7 @@ import { addDecorator } from "@storybook/react"
 import { withPerformance } from "storybook-addon-performance"
 
 import { ThemeProvider } from "../src/components/ThemeProvider"
+import { space, primary, spooky, tufte } from "../src/theme"
 
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
@@ -37,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
     // temporary theme values
     background-color: var(--color-background);
     color: var(--color-text);
+    
   }
   input, button, textarea, select {
     font: inherit;
@@ -63,6 +65,13 @@ const ThemedSectionStyle = styled.div`
   color: var(--color-text);
   padding: 1rem;
 `
+
+const themeMap = {
+  space: space,
+  primary: primary,
+  spooky: spooky,
+}
+
 export const globalTypes = {
   colorMode: {
     name: "Color mode",
@@ -75,19 +84,31 @@ export const globalTypes = {
       showName: true,
     },
   },
+  theme: {
+    name: "Theme",
+    description: "Theme (spooky, space, primary)",
+    defaultValue: "primary",
+    toolbar: {
+      icon: "paintbrush",
+      // array of theme items
+      items: ["spooky", "space", "primary"],
+      showName: true,
+    },
+  },
 }
 const withThemeProvider = (Story, context) => {
   console.log("context.globals.colorMode: ", context.globals.colorMode)
+  console.log("context: ", context)
   if (context.globals.colorMode === "all") {
     return (
       <Wrapper>
         <GlobalStyleMultiTheme />
-        <ThemeProvider colorMode="light">
+        <ThemeProvider theme={themeMap[context.theme]} colorMode="light">
           <ThemedSectionStyle>
             <Story {...context} />
           </ThemedSectionStyle>
         </ThemeProvider>
-        <ThemeProvider colorMode="dark">
+        <ThemeProvider theme={themeMap[context.theme]} colorMode="dark">
           <ThemedSectionStyle>
             <Story {...context} />
           </ThemedSectionStyle>
@@ -97,7 +118,10 @@ const withThemeProvider = (Story, context) => {
   }
 
   return (
-    <ThemeProvider colorMode={context.globals.colorMode}>
+    <ThemeProvider
+      theme={themeMap[context.globals.theme]}
+      colorMode={context.globals.colorMode}
+    >
       <GlobalStyle />
       <Story {...context} />
     </ThemeProvider>

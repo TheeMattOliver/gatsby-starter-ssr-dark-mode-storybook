@@ -1,3 +1,5 @@
+import "@fontsource/creepster"
+import "@fontsource/vt323"
 import React from "react"
 
 import App from "./src/components/App"

@@ -1298,6 +1298,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/creepster@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/creepster/-/creepster-4.5.1.tgz#e92041cecc298c8c88a230d89880cdc2cc61273d"
+  integrity sha512-WoynKcsjkRVfDAc3IDWEYuEBKVXt9z8lxMf7AZrqiH+3Riux5iuvw0+LziOM8BLRdX4nAogKTtDkJsenOH515A==
+
+"@fontsource/vt323@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/vt323/-/vt323-4.5.2.tgz#638eb731ad78eff3bdc3153efe71ac5f8e2da4b4"
+  integrity sha512-grSultV1Z+xzXaj+F9he7uMqhvdcBAHWh2EFko2HWbFb+S1+jGSJKPtRGA35dwVOiES9oNfBPLx4OGa0UHVhIQ==
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"

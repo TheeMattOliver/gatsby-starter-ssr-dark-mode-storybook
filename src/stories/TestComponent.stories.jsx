@@ -1,17 +1,28 @@
 import React from "react"
-
+import { ThemeProvider } from "../components/ThemeProvider"
+import GlobalStyles from "../components/GlobalStyles"
 import TestComponent from "../components/TestComponent"
+
 export default {
   title: "Components/TestComponent",
   component: TestComponent,
   decorators: [
     Story => {
-      // Since portal roots are registered globally, we need this line so that each storybook
-      // story works on its own.
-      return Story()
+      return (
+        <ThemeProvider>
+          <GlobalStyles />
+          <Story />
+        </ThemeProvider>
+      )
     },
   ],
-  argTypes: {},
+  argTypes: {
+    theme: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 }
 
 export const testComponent = args => {
